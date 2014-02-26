@@ -1,0 +1,108 @@
+NAME
+    Stepford - A vaguely Rake/Make/Cake-like thing for Perl - create steps
+    and schedule them
+
+VERSION
+    version 0.000001
+
+SYNOPSIS
+        package My::Step::MakeSomething;
+
+        use Moose;
+
+        with 'StepFord::Role::Step::FileGenerator';
+
+        sub run {
+
+            # write some files somehow
+        }
+
+        package My::Runner;
+
+        use Stepford::Scheduler;
+
+        my @steps = (
+            My::Step::Step1->new(
+                name => 'step 1',
+                ...
+            ),
+            My::Step::Step2->new(
+                name => 'step 2',
+                ...
+            ),
+            My::Step::MakeSomething->new(
+                name         => 'Generate a file',
+                dependencies => [ 'step 1', 'step 2' ],
+            ),
+        );
+
+        my $target_step = $steps[-1];
+
+        # Runs all the steps needed to get to the $final_step.
+        Stepford::Scheduler->new(
+            steps => \@steps,
+        )->run($final_step);
+
+DESCRIPTION
+    NOTE: This is some alpha ju^H^Hcode. You have been warned!
+
+    Stepford provides a framework for running a set of steps that are
+    dependent on other steps. At a high level, this is a lot like Make,
+    Rake, etc. However, the actual implementation is fairly different.
+    Currently, there is no DSL, no Stepfile, etc.
+
+    With Stepford, each step is represented by a class you create. That
+    class should consume either the StepFord::Role::Step::FileGenerator role
+    (if it generates files) or the StepFord::Role::Step step (if it
+    doesn't).
+
+    You then instantiate step objects for each step, giving each step a name
+    and explicitly specifying its dependencies. Finally, you pass all these
+    steps to a Stepford::Scheduler and tell it to run a given step. The
+    scheduler runs all the dependent steps (and their dependencies and so
+    on).
+
+    Each step can specify a "last_run_time()" method (or get one from the
+    StepFord::Role::Step::FileGenerator role). The scheduler uses this to
+    skip steps that are up to date.
+
+    See Stepford::Scheduler, Stepford::Role::Step, and
+    StepFord::Role::Step::FileGenerator for more details.
+
+FUTURE FEATURES
+    There are several very obvious things that should be added to this
+    framework:
+
+    *   Logging
+
+        The scheduler and steps should all accept some sort of optional log
+        object and tell it what they're doing.
+
+    *   Dry runs
+
+        This requires logging, of course.
+
+    *   Parallel running
+
+        Since the scheduler know what steps depend on what other steps, it
+        can also figure out when things can be run in parallel.
+
+VERSIONING POLICY
+    This module uses semantic versioning as described by
+    <http://semver.org/>. Version numbers can be read as X.YYYZZZ, where X
+    is the major number, YYY is the minor number, and ZZZ is the patch
+    number.
+
+SUPPORT
+    Please report all issues with this code using the GitHub issue tracker
+    at <https://github.com/maxmind/Stepford/issues>.
+
+AUTHOR
+    Dave Rolsky <drolsky@maxmind.com>
+
+COPYRIGHT AND LICENSE
+    This software is copyright (c) 2014 by MaxMind, Inc..
+
+    This is free software; you can redistribute it and/or modify it under
+    the same terms as the Perl 5 programming language system itself.
+

@@ -1,0 +1,45 @@
+---
+abstract: 'A vaguely Rake/Make/Cake-like thing for Perl - create steps and schedule them'
+author:
+  - 'Dave Rolsky <drolsky@maxmind.com>'
+build_requires:
+  File::Temp: 0
+  Path::Class: 0
+  Test::Fatal: 0
+  Test::More: 0
+  lib: 0
+configure_requires:
+  ExtUtils::MakeMaker: 6.30
+dynamic_config: 0
+generated_by: 'Dist::Zilla version 5.012, CPAN::Meta::Converter version 2.131560'
+license: perl
+meta-spec:
+  url: http://module-build.sourceforge.net/META-spec-v1.4.html
+  version: 1.4
+name: Stepford
+requires:
+  Graph::Directed: 0
+  List::AllUtils: 0
+  Moose: 0
+  Moose::Role: 0
+  MooseX::Params::Validate: 0
+  MooseX::StrictConstructor: 0
+  MooseX::Types: 0
+  MooseX::Types::Combine: 0
+  MooseX::Types::Common::String: 0
+  MooseX::Types::Moose: 0
+  MooseX::Types::Path::Class: 0
+  Scalar::Util: 0
+  Throwable::Error: 0
+  Time::HiRes: 0
+  namespace::autoclean: 0
+  parent: 0
+  strict: 0
+  warnings: 0
+resources:
+  bugtracker: https://github.com/maxmind/Stepford/issues
+  repository: git://github.com/maxmind/Stepford.git
+version: 0.000001
+x_authority: cpan:DROLSKY
+x_contributors:
+  - 'Dave Rolsky <autarch@urth.org>'
