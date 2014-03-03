@@ -1,5 +1,5 @@
 package Stepford::Role::Step::FileGenerator;
-$Stepford::Role::Step::FileGenerator::VERSION = '0.000001';
+$Stepford::Role::Step::FileGenerator::VERSION = '0.000002';
 use strict;
 use warnings;
 use namespace::autoclean;
@@ -46,7 +46,7 @@ Stepford::Role::Step::FileGenerator - A role for steps that generate files
 
 =head1 VERSION
 
-version 0.000001
+version 0.000002
 
 =head1 DESCRIPTION
 

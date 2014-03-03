@@ -7,6 +7,7 @@ build_requires:
   Path::Class: 0
   Test::Fatal: 0
   Test::More: 0
+  Time::HiRes: 1.9722
   lib: 0
 configure_requires:
   ExtUtils::MakeMaker: 6.30
@@ -31,7 +32,7 @@ requires:
   MooseX::Types::Path::Class: 0
   Scalar::Util: 0
   Throwable::Error: 0
-  Time::HiRes: 0
+  Time::HiRes: 1.9722
   namespace::autoclean: 0
   parent: 0
   strict: 0
@@ -39,7 +40,7 @@ requires:
 resources:
   bugtracker: https://github.com/maxmind/Stepford/issues
   repository: git://github.com/maxmind/Stepford.git
-version: 0.000001
+version: 0.000002
 x_authority: cpan:DROLSKY
 x_contributors:
   - 'Dave Rolsky <autarch@urth.org>'

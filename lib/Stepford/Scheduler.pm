@@ -1,5 +1,5 @@
 package Stepford::Scheduler;
-$Stepford::Scheduler::VERSION = '0.000001';
+$Stepford::Scheduler::VERSION = '0.000002';
 use strict;
 use warnings;
 use namespace::autoclean;
@@ -214,7 +214,7 @@ Stepford::Scheduler - Takes a set of steps and figures out what order to run the
 
 =head1 VERSION
 
-version 0.000001
+version 0.000002
 
 =head1 SYNOPSIS
 

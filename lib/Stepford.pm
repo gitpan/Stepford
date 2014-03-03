@@ -1,5 +1,5 @@
 package Stepford;
-$Stepford::VERSION = '0.000001';
+$Stepford::VERSION = '0.000002';
 use strict;
 use warnings;
 
@@ -17,7 +17,7 @@ Stepford - A vaguely Rake/Make/Cake-like thing for Perl - create steps and sched
 
 =head1 VERSION
 
-version 0.000001
+version 0.000002
 
 =head1 SYNOPSIS
 
