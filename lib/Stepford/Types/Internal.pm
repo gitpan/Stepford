@@ -1,5 +1,5 @@
 package Stepford::Types::Internal;
-$Stepford::Types::Internal::VERSION = '0.000002';
+$Stepford::Types::Internal::VERSION = '0.001000';
 use strict;
 use warnings;
 
@@ -10,11 +10,26 @@ use Scalar::Util qw( blessed );
 
 use MooseX::Types -declare => [
     qw(
+        ArrayOfClassPrefixes
         ArrayOfDependencies
         ArrayOfFiles
+        Logger
+        PossibleClassName
         Step
         )
 ];
+
+subtype PossibleClassName, as Str, inline_as {
+    $_[0]->parent()->_inline_check( $_[1] ) . ' && '
+        . $_[1]
+        . ' =~ /^\\p{L}\\w*(?:::\\w+)*$/';
+};
+
+subtype ArrayOfClassPrefixes, as ArrayRef [PossibleClassName], inline_as {
+    $_[0]->parent()->_inline_check( $_[1] ) . " && \@{ $_[1] } >= 1";
+};
+
+coerce ArrayOfClassPrefixes, from PossibleClassName, via { [$_] };
 
 subtype ArrayOfDependencies, as ArrayRef [NonEmptyStr];
 
@@ -25,6 +40,8 @@ subtype ArrayOfFiles, as ArrayRef [File], inline_as {
 };
 
 coerce ArrayOfFiles, from File, via { [$_] };
+
+duck_type Logger, [qw( debug info notice warning error )];
 
 role_type Step, { role => 'Stepford::Role::Step' };
 
@@ -42,7 +59,7 @@ Stepford::Types::Internal - Internal type definitions for Stepford
 
 =head1 VERSION
 
-version 0.000002
+version 0.001000
 
 =head1 AUTHOR
 

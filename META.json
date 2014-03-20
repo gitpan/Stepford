@@ -1,10 +1,10 @@
 {
-   "abstract" : "A vaguely Rake/Make/Cake-like thing for Perl - create steps and schedule them",
+   "abstract" : "A vaguely Rake/Make/Cake-like thing for Perl - create steps and let a planner run them",
    "author" : [
       "Dave Rolsky <drolsky@maxmind.com>"
    ],
    "dynamic_config" : 0,
-   "generated_by" : "Dist::Zilla version 5.012, CPAN::Meta::Converter version 2.131560",
+   "generated_by" : "Dist::Zilla version 5.013, CPAN::Meta::Converter version 2.131560",
    "license" : [
       "perl_5"
    ],
@@ -31,14 +31,20 @@
       },
       "runtime" : {
          "requires" : {
+            "Carp" : "0",
             "Graph::Directed" : "0",
             "List::AllUtils" : "0",
+            "Log::Dispatch" : "0",
+            "Log::Dispatch::Null" : "0",
+            "Module::Pluggable::Object" : "0",
+            "Module::Runtime" : "0",
             "Moose" : "0",
             "Moose::Role" : "0",
             "MooseX::Params::Validate" : "0",
             "MooseX::StrictConstructor" : "0",
             "MooseX::Types" : "0",
             "MooseX::Types::Combine" : "0",
+            "MooseX::Types::Common::Numeric" : "0",
             "MooseX::Types::Common::String" : "0",
             "MooseX::Types::Moose" : "0",
             "MooseX::Types::Path::Class" : "0",
@@ -54,6 +60,7 @@
       "test" : {
          "requires" : {
             "File::Temp" : "0",
+            "Log::Dispatch::Array" : "0",
             "Path::Class" : "0",
             "Test::Fatal" : "0",
             "Test::More" : "0",
@@ -73,10 +80,11 @@
          "web" : "https://github.com/maxmind/Stepford"
       }
    },
-   "version" : "0.000002",
+   "version" : "0.001000",
    "x_authority" : "cpan:DROLSKY",
    "x_contributors" : [
-      "Dave Rolsky <autarch@urth.org>"
+      "Dave Rolsky <autarch@urth.org>",
+      "Gregory Oschwald <goschwald@maxmind.com>"
    ]
 }
 

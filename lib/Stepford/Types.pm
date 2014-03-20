@@ -1,15 +1,19 @@
 package Stepford::Types;
-$Stepford::Types::VERSION = '0.000002';
+$Stepford::Types::VERSION = '0.001000';
 use strict;
 use warnings;
 
+use MooseX::Types::Common::Numeric;
 use MooseX::Types::Moose;
+use MooseX::Types::Path::Class;
 
 use parent 'MooseX::Types::Combine';
 
 __PACKAGE__->provide_types_from(
     qw(
+        MooseX::Types::Common::Numeric
         MooseX::Types::Moose
+        MooseX::Types::Path::Class
         Stepford::Types::Internal
         )
 );
@@ -28,7 +32,7 @@ Stepford::Types - Type library used in Stepford classes/roles
 
 =head1 VERSION
 
-version 0.000002
+version 0.001000
 
 =head1 AUTHOR
 
