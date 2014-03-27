@@ -1,5 +1,5 @@
 package Stepford::Planner;
-$Stepford::Planner::VERSION = '0.001000';
+$Stepford::Planner::VERSION = '0.001001';
 use strict;
 use warnings;
 use namespace::autoclean;
@@ -150,7 +150,7 @@ sub _add_steps_to_plan {
     my $for_step = shift;
     my $plan     = shift;
 
-    my @preds = $self->_graph()->predecessors($for_step)
+    my @preds = sort $self->_graph()->predecessors($for_step)
         or return;
 
     unshift @{$plan}, \@preds;
@@ -339,7 +339,7 @@ Stepford::Planner - Takes a set of steps and figures out what order to run them 
 
 =head1 VERSION
 
-version 0.001000
+version 0.001001
 
 =head1 SYNOPSIS
 

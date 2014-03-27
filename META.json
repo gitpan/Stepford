@@ -80,7 +80,7 @@
          "web" : "https://github.com/maxmind/Stepford"
       }
    },
-   "version" : "0.001000",
+   "version" : "0.001001",
    "x_authority" : "cpan:DROLSKY",
    "x_contributors" : [
       "Dave Rolsky <autarch@urth.org>",
