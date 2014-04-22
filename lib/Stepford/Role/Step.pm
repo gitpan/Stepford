@@ -1,5 +1,5 @@
 package Stepford::Role::Step;
-$Stepford::Role::Step::VERSION = '0.001001';
+$Stepford::Role::Step::VERSION = '0.001002';
 use strict;
 use warnings;
 use namespace::autoclean;
@@ -66,7 +66,7 @@ Stepford::Role::Step - The basic role all step classes must implement
 
 =head1 VERSION
 
-version 0.001001
+version 0.001002
 
 =head1 DESCRIPTION
 

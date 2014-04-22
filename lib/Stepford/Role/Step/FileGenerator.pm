@@ -1,5 +1,5 @@
 package Stepford::Role::Step::FileGenerator;
-$Stepford::Role::Step::FileGenerator::VERSION = '0.001001';
+$Stepford::Role::Step::FileGenerator::VERSION = '0.001002';
 use strict;
 use warnings;
 use namespace::autoclean;
@@ -8,7 +8,7 @@ use Carp qw( croak );
 use List::AllUtils qw( max );
 use Stepford::Types qw( File );
 # Sadly, there's no (sane) way to make Path::Class::File use this
-use Time::HiRes qw( stat );
+use Time::HiRes 1.9726 qw( stat );
 
 use Moose::Role;
 
@@ -56,7 +56,7 @@ Stepford::Role::Step::FileGenerator - A role for steps that generate files
 
 =head1 VERSION
 
-version 0.001001
+version 0.001002
 
 =head1 DESCRIPTION
 
