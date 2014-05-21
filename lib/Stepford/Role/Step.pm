@@ -1,5 +1,5 @@
 package Stepford::Role::Step;
-$Stepford::Role::Step::VERSION = '0.001002';
+$Stepford::Role::Step::VERSION = '0.002000';
 use strict;
 use warnings;
 use namespace::autoclean;
@@ -35,6 +35,14 @@ sub has_production {
     return any { $_->name() eq $name } $class->productions();
 }
 
+sub productions_as_hash {
+    my $self = shift;
+
+    return
+        map { $_->name() => $self->production_value( $_->name() ) }
+        $self->productions();
+}
+
 sub production_value {
     my $self = shift;
     my $name = shift;
@@ -66,7 +74,7 @@ Stepford::Role::Step - The basic role all step classes must implement
 
 =head1 VERSION
 
-version 0.001002
+version 0.002000
 
 =head1 DESCRIPTION
 
@@ -94,6 +102,10 @@ given the C<StepProduction> trait. This can be an empty list.
 =head2 $step->has_production($name)
 
 Returns true if the step has a production of the given name.
+
+=head2 $step->productions_as_hash()
+
+Returns all production values as a hash.
 
 =head2 $step->production_value($name)
 

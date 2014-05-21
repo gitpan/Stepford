@@ -1,5 +1,5 @@
 package Stepford::Types::Internal;
-$Stepford::Types::Internal::VERSION = '0.001002';
+$Stepford::Types::Internal::VERSION = '0.002000';
 use strict;
 use warnings;
 
@@ -13,6 +13,7 @@ use MooseX::Types -declare => [
         ArrayOfClassPrefixes
         ArrayOfDependencies
         ArrayOfFiles
+        ArrayOfSteps
         Logger
         PossibleClassName
         Step
@@ -45,6 +46,10 @@ duck_type Logger, [qw( debug info notice warning error )];
 
 role_type Step, { role => 'Stepford::Role::Step' };
 
+subtype ArrayOfSteps, as ArrayRef [Step];
+
+coerce ArrayOfSteps, from Step, via { [$_] };
+
 1;
 
 # ABSTRACT: Internal type definitions for Stepford
@@ -59,7 +64,7 @@ Stepford::Types::Internal - Internal type definitions for Stepford
 
 =head1 VERSION
 
-version 0.001002
+version 0.002000
 
 =head1 AUTHOR
 

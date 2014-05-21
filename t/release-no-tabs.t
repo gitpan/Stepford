@@ -8,9 +8,25 @@ BEGIN {
 
 use strict;
 use warnings;
-use Test::More;
 
-eval 'use Test::NoTabs';
-plan skip_all => 'Test::NoTabs required' if $@;
+# this test was generated with Dist::Zilla::Plugin::Test::NoTabs 0.06
 
-all_perl_files_ok();
+use Test::More 0.88;
+use Test::NoTabs;
+
+my @files = (
+    'lib/Stepford.pm',
+    'lib/Stepford/Error.pm',
+    'lib/Stepford/FinalStep.pm',
+    'lib/Stepford/Plan.pm',
+    'lib/Stepford/Planner.pm',
+    'lib/Stepford/Role/Step.pm',
+    'lib/Stepford/Role/Step/FileGenerator.pm',
+    'lib/Stepford/Trait/StepDependency.pm',
+    'lib/Stepford/Trait/StepProduction.pm',
+    'lib/Stepford/Types.pm',
+    'lib/Stepford/Types/Internal.pm'
+);
+
+notabs_ok($_) foreach @files;
+done_testing;
