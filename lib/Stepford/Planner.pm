@@ -1,5 +1,5 @@
 package Stepford::Planner;
-$Stepford::Planner::VERSION = '0.002000';
+$Stepford::Planner::VERSION = '0.002001';
 use strict;
 use warnings;
 use namespace::autoclean;
@@ -348,17 +348,23 @@ Stepford::Planner - Takes a set of steps and figures out what order to run them 
 
 =head1 VERSION
 
-version 0.002000
+version 0.002001
 
 =head1 SYNOPSIS
 
     use Stepford::Planner;
 
-    Stepford::Planner->new(
+    my $planner = Stepford::Planner->new(
         step_namespaces => 'My::Step',
-        final_steps =>
-            [ 'My::Step::MakeSomething', 'My::Step::MakeSomethingElse' ],
-    )->run();
+    );
+
+    $planner->run(
+        final_steps => [
+            'My::Step::DeployCatDatabase',
+            'My::Step::DeployDogDatabase',
+        ],
+        config => {...},
+    );
 
 =head1 DESCRIPTION
 

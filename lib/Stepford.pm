@@ -1,5 +1,5 @@
 package Stepford;
-$Stepford::VERSION = '0.002000';
+$Stepford::VERSION = '0.002001';
 use strict;
 use warnings;
 
@@ -17,7 +17,7 @@ Stepford - A vaguely Rake/Make/Cake-like thing for Perl - create steps and let a
 
 =head1 VERSION
 
-version 0.002000
+version 0.002001
 
 =head1 SYNOPSIS
 
@@ -55,15 +55,18 @@ version 0.002000
 
     package My::Runner;
 
-    use My::Step::MakeSomething;
     use Stepford::Planner;
 
-    # Runs all the steps needed to get to the final_steps.
-    Stepford::Scheduler->new(
+    my $planner = Stepford::Planner->new(
         step_namespaces => 'My::Step',
-        )->run(
+        logger          => $log_dispatch_object,    # optional
+        jobs            => 4,                       # optional
+    );
+
+    # Runs all the steps needed to get to the final_steps.
+    $planner->run(
         final_steps => 'My::Step::MakeSomething',
-        );
+    );
 
 =head1 DESCRIPTION
 
