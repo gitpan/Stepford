@@ -1,5 +1,5 @@
 package Stepford::Types;
-$Stepford::Types::VERSION = '0.002001';
+$Stepford::Types::VERSION = '0.002002';
 use strict;
 use warnings;
 
@@ -26,13 +26,15 @@ __END__
 
 =pod
 
+=encoding UTF-8
+
 =head1 NAME
 
 Stepford::Types - Type library used in Stepford classes/roles
 
 =head1 VERSION
 
-version 0.002001
+version 0.002002
 
 =head1 AUTHOR
 

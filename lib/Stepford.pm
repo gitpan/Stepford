@@ -1,5 +1,5 @@
 package Stepford;
-$Stepford::VERSION = '0.002001';
+$Stepford::VERSION = '0.002002';
 use strict;
 use warnings;
 
@@ -11,13 +11,15 @@ __END__
 
 =pod
 
+=encoding UTF-8
+
 =head1 NAME
 
 Stepford - A vaguely Rake/Make/Cake-like thing for Perl - create steps and let a planner run them
 
 =head1 VERSION
 
-version 0.002001
+version 0.002002
 
 =head1 SYNOPSIS
 

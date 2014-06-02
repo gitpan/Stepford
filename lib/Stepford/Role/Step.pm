@@ -1,5 +1,5 @@
 package Stepford::Role::Step;
-$Stepford::Role::Step::VERSION = '0.002001';
+$Stepford::Role::Step::VERSION = '0.002002';
 use strict;
 use warnings;
 use namespace::autoclean;
@@ -68,13 +68,15 @@ __END__
 
 =pod
 
+=encoding UTF-8
+
 =head1 NAME
 
 Stepford::Role::Step - The basic role all step classes must implement
 
 =head1 VERSION
 
-version 0.002001
+version 0.002002
 
 =head1 DESCRIPTION
 

@@ -1,5 +1,5 @@
 package Stepford::Types::Internal;
-$Stepford::Types::Internal::VERSION = '0.002001';
+$Stepford::Types::Internal::VERSION = '0.002002';
 use strict;
 use warnings;
 
@@ -58,13 +58,15 @@ __END__
 
 =pod
 
+=encoding UTF-8
+
 =head1 NAME
 
 Stepford::Types::Internal - Internal type definitions for Stepford
 
 =head1 VERSION
 
-version 0.002001
+version 0.002002
 
 =head1 AUTHOR
 

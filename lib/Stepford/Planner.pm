@@ -1,5 +1,5 @@
 package Stepford::Planner;
-$Stepford::Planner::VERSION = '0.002001';
+$Stepford::Planner::VERSION = '0.002002';
 use strict;
 use warnings;
 use namespace::autoclean;
@@ -301,6 +301,12 @@ sub _build_step_classes {
         # We need to skip roles
         next unless $class->isa('Moose::Object');
 
+        unless ( $class->does('Stepford::Role::Step') ) {
+            Stepford::Error->throw( message =>
+                    qq{Found a class which doesn't do the Stepford::Role::Step role: $class}
+            );
+        }
+
         $self->logger()->debug("Found step class $class");
         push @classes, $class;
     }
@@ -342,13 +348,15 @@ __END__
 
 =pod
 
+=encoding UTF-8
+
 =head1 NAME
 
 Stepford::Planner - Takes a set of steps and figures out what order to run them in
 
 =head1 VERSION
 
-version 0.002001
+version 0.002002
 
 =head1 SYNOPSIS
 
@@ -406,6 +414,14 @@ provide different steps in a different environments (for example, for testing).
 
 The constructor checks for circular dependencies among the steps and will
 throw a L<Stepford::Error> exception if it finds one.
+
+The planner object assumes that every B<class> it finds in a step namespace is
+a step. Specifically, if it finds a package that is a subclass of
+L<Moose::Object>, then it throws an error if that package does not also
+consume the L<Stepford::Role::Step> role.
+
+This means you can have utility packages and roles in a step namespace, but
+not Moose objects which aren't steps.
 
 =item * final_steps
 
