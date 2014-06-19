@@ -1,5 +1,5 @@
 package Stepford::Plan;
-$Stepford::Plan::VERSION = '0.002002';
+$Stepford::Plan::VERSION = '0.002003';
 use strict;
 use warnings;
 use namespace::autoclean;
@@ -128,6 +128,10 @@ sub _add_steps_to_tree {
                 "A dependency ($dep) for $step resolved to the same step.")
                 if $map->{$dep} eq $step;
 
+            $self->logger()
+                ->debug(
+                "Dependency $dep for $step is provided by $map->{$dep}");
+
             $deps{ $map->{$dep} } = 1;
         }
 
@@ -189,7 +193,7 @@ Stepford::Plan - Represents a concrete plan for execution by a Stepford::Planner
 
 =head1 VERSION
 
-version 0.002002
+version 0.002003
 
 =head1 DESCRIPTION
 

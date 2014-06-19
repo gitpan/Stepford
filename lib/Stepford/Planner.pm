@@ -1,5 +1,5 @@
 package Stepford::Planner;
-$Stepford::Planner::VERSION = '0.002002';
+$Stepford::Planner::VERSION = '0.002003';
 use strict;
 use warnings;
 use namespace::autoclean;
@@ -356,7 +356,7 @@ Stepford::Planner - Takes a set of steps and figures out what order to run them 
 
 =head1 VERSION
 
-version 0.002002
+version 0.002003
 
 =head1 SYNOPSIS
 
@@ -479,10 +479,6 @@ doing a lot of work in your constructor. Save that for the C<run()> method.
 
 This method returns the step namespaces passed to the constructor as a list
 (not an arrayref).
-
-=head2 $planner->final_step()
-
-This method returns the C<final_step> argument passed to the constructor.
 
 =head2 $planner->logger()
 

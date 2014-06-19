@@ -1,5 +1,5 @@
 package Stepford::Trait::StepProduction;
-$Stepford::Trait::StepProduction::VERSION = '0.002002';
+$Stepford::Trait::StepProduction::VERSION = '0.002003';
 use strict;
 use warnings;
 use namespace::autoclean;
@@ -27,7 +27,7 @@ Stepford::Trait::StepProduction - A trait for attributes which are a step produc
 
 =head1 VERSION
 
-version 0.002002
+version 0.002003
 
 =head1 AUTHOR
 
