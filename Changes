@@ -1,3 +1,9 @@
+0.002005 2014-06-30
+
+- More doc fixes for Stepford::Planner. The docs on when we do error checks
+  and what type of errors are checked for were out of date.
+
+
 0.002004 2014-06-30
 
 - Fixed the Stepford::Planner docs. The docs said that the constructor

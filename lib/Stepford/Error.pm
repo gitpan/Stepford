@@ -1,5 +1,5 @@
 package Stepford::Error;
-$Stepford::Error::VERSION = '0.002004';
+$Stepford::Error::VERSION = '0.002005';
 use strict;
 use warnings;
 
@@ -25,7 +25,7 @@ Stepford::Error - A Stepford exception object
 
 =head1 VERSION
 
-version 0.002004
+version 0.002005
 
 =head1 DESCRIPTION
 
