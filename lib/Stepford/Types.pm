@@ -1,5 +1,5 @@
 package Stepford::Types;
-$Stepford::Types::VERSION = '0.002003';
+$Stepford::Types::VERSION = '0.002004';
 use strict;
 use warnings;
 
@@ -34,7 +34,7 @@ Stepford::Types - Type library used in Stepford classes/roles
 
 =head1 VERSION
 
-version 0.002003
+version 0.002004
 
 =head1 AUTHOR
 
