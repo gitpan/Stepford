@@ -1,3 +1,14 @@
+0.002007 2014-09-30
+
+- FileGenerator steps can now return undef from the last_run_time() method in
+  order to indicate that the step must be re-run. The last_run_time() method
+  provided by the Stepford::Role::Step::FileGenerator role does this when any
+  of the production files are missing. Fixed by Ran Eilam. GH #9.
+
+- When running a parallel plan, steps that should have been rebuilt because of
+  stale files were not being rebuilt properly. Fixed by Ran Eilam. GH #10.
+
+
 0.002006 2014-08-12
 
 - The logger passed to each step class is now wrapped to prepend a per-step

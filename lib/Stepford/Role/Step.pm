@@ -1,5 +1,5 @@
 package Stepford::Role::Step;
-$Stepford::Role::Step::VERSION = '0.002006';
+$Stepford::Role::Step::VERSION = '0.002007';
 use strict;
 use warnings;
 use namespace::autoclean;
@@ -98,7 +98,7 @@ Stepford::Role::Step - The basic role all step classes must implement
 
 =head1 VERSION
 
-version 0.002006
+version 0.002007
 
 =head1 DESCRIPTION
 
@@ -162,6 +162,9 @@ It may also do other things such as record the last run time.
 This method must return a timestamp marking the last time the step was
 run. You are encouraged to use L<Time::HiRes> as appropriate to provide hi-res
 timestamps.
+
+You can return C<undef> from this method to request an unconditional rebuild
+of this step, regardless of the C<last_run_time()> of previous steps.
 
 =head1 OPTIONAL METHODS
 

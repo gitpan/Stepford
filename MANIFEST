@@ -23,9 +23,12 @@ t/00-compile.t
 t/00-report-prereqs.dd
 t/00-report-prereqs.t
 t/Planner-inner-steps.t
+t/Planner-integration.t
 t/Planner-parallel.t
+t/Planner-rebuild-on-missing-files.t
 t/Planner.t
 t/Step.t
+t/author-no-tabs.t
 t/author-pod-spell.t
 t/lib/Test1/Step/CombineFiles.pm
 t/lib/Test1/Step/CreateA1.pm
@@ -34,7 +37,6 @@ t/lib/Test1/Step/UpdateFiles.pm
 t/lib/Test1/StepGroup/CreateAndBackup.pm
 t/release-cpan-changes.t
 t/release-eol.t
-t/release-no-tabs.t
 t/release-pod-coverage.t
 t/release-pod-syntax.t
 t/release-portability.t

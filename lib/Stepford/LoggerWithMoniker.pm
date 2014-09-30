@@ -1,5 +1,5 @@
 package Stepford::LoggerWithMoniker;
-$Stepford::LoggerWithMoniker::VERSION = '0.002006';
+$Stepford::LoggerWithMoniker::VERSION = '0.002007';
 use strict;
 use warnings;
 
@@ -52,7 +52,7 @@ Stepford::LoggerWithMoniker - The logger used by Step classes.
 
 =head1 VERSION
 
-version 0.002006
+version 0.002007
 
 =head1 DESCRIPTION
 

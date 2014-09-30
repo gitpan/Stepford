@@ -1,5 +1,5 @@
 package Stepford::Planner;
-$Stepford::Planner::VERSION = '0.002006';
+$Stepford::Planner::VERSION = '0.002007';
 use strict;
 use warnings;
 use namespace::autoclean;
@@ -144,7 +144,7 @@ sub _run_parallel {
                     die "Child process $pid failed";
                 }
                 else {
-                    push @current_steps_run_times, $message->{run_time};
+                    push @current_steps_run_times, $message->{last_run_time};
                     %productions = (
                         %productions,
                         %{ $message->{productions} },
@@ -354,7 +354,7 @@ Stepford::Planner - Takes a set of steps and figures out what order to run them 
 
 =head1 VERSION
 
-version 0.002006
+version 0.002007
 
 =head1 SYNOPSIS
 

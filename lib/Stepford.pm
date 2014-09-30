@@ -1,5 +1,5 @@
 package Stepford;
-$Stepford::VERSION = '0.002006';
+$Stepford::VERSION = '0.002007';
 use strict;
 use warnings;
 
@@ -19,7 +19,7 @@ Stepford - A vaguely Rake/Make/Cake-like thing for Perl - create steps and let a
 
 =head1 VERSION
 
-version 0.002006
+version 0.002007
 
 =head1 SYNOPSIS
 

@@ -1,5 +1,5 @@
 package Stepford::FinalStep;
-$Stepford::FinalStep::VERSION = '0.002006';
+$Stepford::FinalStep::VERSION = '0.002007';
 use strict;
 use warnings;
 use namespace::autoclean;
@@ -40,7 +40,7 @@ Stepford::FinalStep - The final step for all Stepford runs
 
 =head1 VERSION
 
-version 0.002006
+version 0.002007
 
 =head1 DESCRIPTION
 

@@ -89,13 +89,14 @@
          "web" : "https://github.com/maxmind/Stepford"
       }
    },
-   "version" : "0.002006",
+   "version" : "0.002007",
    "x_authority" : "cpan:DROLSKY",
    "x_contributors" : [
       "Dave Rolsky <autarch@urth.org>",
       "Gregory Oschwald <goschwald@maxmind.com>",
       "Olaf Alders <olaf@wundersolutions.com>",
-      "Ran Eilam <ran.eilam@gmail.com>"
+      "Ran Eilam <ran.eilam@gmail.com>",
+      "Ran Eilam <reilam@maxmind.com>"
    ]
 }
 
