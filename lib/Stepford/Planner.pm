@@ -1,5 +1,5 @@
 package Stepford::Planner;
-$Stepford::Planner::VERSION = '0.002007';
+$Stepford::Planner::VERSION = '0.002008';
 use strict;
 use warnings;
 use namespace::autoclean;
@@ -354,7 +354,7 @@ Stepford::Planner - Takes a set of steps and figures out what order to run them 
 
 =head1 VERSION
 
-version 0.002007
+version 0.002008
 
 =head1 SYNOPSIS
 
