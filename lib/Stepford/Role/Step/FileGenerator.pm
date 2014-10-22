@@ -1,5 +1,5 @@
 package Stepford::Role::Step::FileGenerator;
-$Stepford::Role::Step::FileGenerator::VERSION = '0.002008';
+$Stepford::Role::Step::FileGenerator::VERSION = '0.002009';
 use strict;
 use warnings;
 use namespace::autoclean;
@@ -54,15 +54,13 @@ __END__
 
 =pod
 
-=encoding UTF-8
-
 =head1 NAME
 
 Stepford::Role::Step::FileGenerator - A role for steps that generate files
 
 =head1 VERSION
 
-version 0.002008
+version 0.002009
 
 =head1 DESCRIPTION
 

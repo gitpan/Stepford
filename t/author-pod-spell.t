@@ -18,6 +18,16 @@ use Pod::Wordlist;
 add_stopwords(<DATA>);
 all_pod_files_spelling_ok( qw( bin lib  ) );
 __DATA__
+Alders
+Alders'
+Eilam
+Eilam's
+MaxMind
+MaxMind's
+Oschwald
+Oschwald's
+Rolsky
+Rolsky's
 CopyFiles
 CopyFooBarFilesToProduction
 DBI
@@ -29,7 +39,6 @@ VERSIONING
 YYY
 YYYZZZ
 iteratively
-manully
 namespace
 namespaces
 prepends
@@ -40,20 +49,13 @@ timestamps
 username
 versioning
 Dave
-Rolsky
 drolsky
-MaxMind
 Inc
-autarch
-Gregory
-Oschwald
+Greg
 goschwald
 Olaf
-Alders
-olaf
+oalders
 Ran
-Eilam
-ran
 reilam
 lib
 Stepford
@@ -69,4 +71,5 @@ Internal
 Role
 Step
 FileGenerator
+Atomic
 Plan

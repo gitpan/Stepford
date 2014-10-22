@@ -1,5 +1,5 @@
 package Stepford::Planner;
-$Stepford::Planner::VERSION = '0.002008';
+$Stepford::Planner::VERSION = '0.002009';
 use strict;
 use warnings;
 use namespace::autoclean;
@@ -346,15 +346,13 @@ __END__
 
 =pod
 
-=encoding UTF-8
-
 =head1 NAME
 
 Stepford::Planner - Takes a set of steps and figures out what order to run them in
 
 =head1 VERSION
 
-version 0.002008
+version 0.002009
 
 =head1 SYNOPSIS
 
@@ -382,6 +380,8 @@ Steps which are up to date are skipped during the run, so no unnecessary work
 is done.
 
 =for Pod::Coverage BUILD add_step
+
+=for test_synopsis BEGIN { die "SKIP: skip this pod. I can't make it accept the ... operator!\n"; }
 
 =head1 METHODS
 

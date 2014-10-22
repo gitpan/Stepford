@@ -23,6 +23,7 @@ my @files = (
     'lib/Stepford/Planner.pm',
     'lib/Stepford/Role/Step.pm',
     'lib/Stepford/Role/Step/FileGenerator.pm',
+    'lib/Stepford/Role/Step/FileGenerator/Atomic.pm',
     'lib/Stepford/Trait/StepDependency.pm',
     'lib/Stepford/Trait/StepProduction.pm',
     'lib/Stepford/Types.pm',
@@ -35,6 +36,7 @@ my @files = (
     't/Planner-parallel.t',
     't/Planner-rebuild-on-missing-files.t',
     't/Planner.t',
+    't/Step-FileGenerator-Atomic.t',
     't/Step.t',
     't/author-no-tabs.t',
     't/author-pod-spell.t',
@@ -46,8 +48,11 @@ my @files = (
     't/release-cpan-changes.t',
     't/release-eol.t',
     't/release-pod-coverage.t',
+    't/release-pod-linkcheck.t',
+    't/release-pod-no404s.t',
     't/release-pod-syntax.t',
-    't/release-portability.t'
+    't/release-portability.t',
+    't/release-synopsis.t'
 );
 
 notabs_ok($_) foreach @files;

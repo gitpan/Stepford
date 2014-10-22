@@ -1,5 +1,5 @@
 package Stepford::Error;
-$Stepford::Error::VERSION = '0.002008';
+$Stepford::Error::VERSION = '0.002009';
 use strict;
 use warnings;
 
@@ -17,15 +17,13 @@ __END__
 
 =pod
 
-=encoding UTF-8
-
 =head1 NAME
 
 Stepford::Error - A Stepford exception object
 
 =head1 VERSION
 
-version 0.002008
+version 0.002009
 
 =head1 DESCRIPTION
 

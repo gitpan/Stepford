@@ -4,7 +4,7 @@ Stepford - A vaguely Rake/Make/Cake-like thing for Perl - create steps and let a
 
 # VERSION
 
-version 0.002008
+version 0.002009
 
 # SYNOPSIS
 
@@ -105,7 +105,7 @@ dependencies (and therefore productions) must be serializable data types (so
 no [DBI](https://metacpan.org/pod/DBI) handles, etc.).
 
 A dependency is simply a value that a given step expects to get from another
-step (they can also be supplied to the planner manully).
+step (they can also be supplied to the planner manually).
 
 The flip side of a dependency is a production. This is a value that the step
 will generate as needed.
@@ -162,6 +162,12 @@ Please report all issues with this code using the GitHub issue tracker at
 # AUTHOR
 
 Dave Rolsky <drolsky@maxmind.com>
+
+# CONTRIBUTORS
+
+- Greg Oschwald <goschwald@maxmind.com>
+- Olaf Alders <oalders@maxmind.com>
+- Ran Eilam <reilam@maxmind.com>
 
 # COPYRIGHT AND LICENSE
 

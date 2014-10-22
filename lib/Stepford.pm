@@ -1,5 +1,7 @@
 package Stepford;
-$Stepford::VERSION = '0.002008';
+# git description: v0.002008-20-g9c8174f
+$Stepford::VERSION = '0.002009';
+
 use strict;
 use warnings;
 
@@ -11,15 +13,13 @@ __END__
 
 =pod
 
-=encoding UTF-8
-
 =head1 NAME
 
 Stepford - A vaguely Rake/Make/Cake-like thing for Perl - create steps and let a planner run them
 
 =head1 VERSION
 
-version 0.002008
+version 0.002009
 
 =head1 SYNOPSIS
 
@@ -98,6 +98,8 @@ steps that are up to date.
 See L<Stepford::Planner>, L<Stepford::Role::Step>, and
 L<StepFord::Role::Step::FileGenerator> for more details.
 
+=for test_synopsis my $log_object;
+
 =head1 CONCEPTS AND DESIGN
 
 In order to understand how Stepford works you must understand a few key concepts.
@@ -120,7 +122,7 @@ dependencies (and therefore productions) must be serializable data types (so
 no L<DBI> handles, etc.).
 
 A dependency is simply a value that a given step expects to get from another
-step (they can also be supplied to the planner manully).
+step (they can also be supplied to the planner manually).
 
 The flip side of a dependency is a production. This is a value that the step
 will generate as needed.
@@ -181,6 +183,26 @@ L<https://github.com/maxmind/Stepford/issues>.
 =head1 AUTHOR
 
 Dave Rolsky <drolsky@maxmind.com>
+
+=head1 CONTRIBUTORS
+
+=for stopwords Greg Oschwald Olaf Alders Ran Eilam
+
+=over 4
+
+=item *
+
+Greg Oschwald <goschwald@maxmind.com>
+
+=item *
+
+Olaf Alders <oalders@maxmind.com>
+
+=item *
+
+Ran Eilam <reilam@maxmind.com>
+
+=back
 
 =head1 COPYRIGHT AND LICENSE
 
