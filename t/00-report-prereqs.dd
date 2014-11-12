@@ -1,11 +1,13 @@
 do { my $x = {
        'configure' => {
                         'requires' => {
-                                        'ExtUtils::MakeMaker' => '0'
+                                        'ExtUtils::MakeMaker' => '0',
+                                        'perl' => '5.006'
                                       }
                       },
        'develop' => {
                       'requires' => {
+                                      'IPC::Signal' => '0',
                                       'Pod::Coverage::TrustPod' => '0',
                                       'Test::CPAN::Changes' => '0.19',
                                       'Test::EOL' => '0',
@@ -43,7 +45,7 @@ do { my $x = {
                                       'Time::HiRes' => '1.9726',
                                       'namespace::autoclean' => '0',
                                       'parent' => '0',
-                                      'perl' => '5.006',
+                                      'perl' => '5.010',
                                       'strict' => '0',
                                       'warnings' => '0'
                                     }
@@ -57,12 +59,16 @@ do { my $x = {
                                    'File::Spec' => '0',
                                    'IO::Handle' => '0',
                                    'IPC::Open3' => '0',
+                                   'IPC::Signal' => '0',
                                    'Log::Dispatch::Array' => '0',
                                    'Test::Differences' => '0',
                                    'Test::Fatal' => '0',
                                    'Test::More' => '0.88',
+                                   'Test::Requires' => '0',
+                                   'Try::Tiny' => '0',
+                                   'autodie' => '0',
                                    'lib' => '0',
-                                   'perl' => '5.006'
+                                   'perl' => '5.010'
                                  }
                  }
      };

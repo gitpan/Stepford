@@ -1,5 +1,5 @@
 package Stepford::Trait::StepDependency;
-$Stepford::Trait::StepDependency::VERSION = '0.002009';
+$Stepford::Trait::StepDependency::VERSION = '0.002010';
 use strict;
 use warnings;
 use namespace::autoclean;
@@ -25,7 +25,7 @@ Stepford::Trait::StepDependency - A trait for attributes which are a step depend
 
 =head1 VERSION
 
-version 0.002009
+version 0.002010
 
 =head1 AUTHOR
 

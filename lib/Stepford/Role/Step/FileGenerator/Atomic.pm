@@ -1,5 +1,5 @@
 package Stepford::Role::Step::FileGenerator::Atomic;
-$Stepford::Role::Step::FileGenerator::Atomic::VERSION = '0.002009';
+$Stepford::Role::Step::FileGenerator::Atomic::VERSION = '0.002010';
 use strict;
 use warnings;
 use namespace::autoclean;
@@ -13,17 +13,19 @@ use Moose::Role;
 
 with 'Stepford::Role::Step::FileGenerator';
 
-has _temp_dir_handle => (
-    is      => 'ro',
-    isa     => 'File::Temp::Dir',
-    default => sub { File::Temp->new()->newdir() },
+has _tempdir => (
+    is       => 'ro',
+    isa      => 'File::Temp::Dir',
+    init_arg => undef,
+    lazy     => 1,
+    default  => sub { File::Temp->newdir() },
 );
 
 has pre_commit_file => (
     is      => 'ro',
     isa     => File,
     lazy    => 1,
-    default => sub { dir( shift->_temp_dir_handle() )->file('pre-commit') },
+    default => sub { dir( $_[0]->_tempdir() )->file('pre-commit') },
 );
 
 sub BUILD { }
@@ -74,7 +76,7 @@ Stepford::Role::Step::FileGenerator::Atomic - A role for steps that generate a f
 
 =head1 VERSION
 
-version 0.002009
+version 0.002010
 
 =head1 DESCRIPTION
 
@@ -84,7 +86,7 @@ will not exist if the step aborts. The file will only be committed to its
 final destination when C<run()> completes successfully.
 
 Instead of manipulating the file production directly, you work with the file
-given by C<$step->pre_commit_file()>. This role will make sure it gets
+given by C<< $step->pre_commit_file() >>. This role will make sure it gets
 committed after C<run()>.
 
 =head1 METHODS
@@ -101,6 +103,14 @@ only one production.
 This returns a temporary file in a temporary directory that you can manipulate
 inside C<run()>. It will be removed if the step fails, or renamed to the final
 file production if the step succeeds.
+
+=head1 CAVEATS
+
+When running steps in parallel, it is important to ensure that you do not call
+the C<< $step->pre_commit_file() >> method outside of the C<< $step->run() >>
+method. If you call this at object creation time, this can cause the tempdir
+containing the C< pre_commit_file > file to be created and destroyed before the
+run method ever gets a chance to run.
 
 =head1 AUTHOR
 

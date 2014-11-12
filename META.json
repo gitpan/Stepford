@@ -4,7 +4,7 @@
       "Dave Rolsky <drolsky@maxmind.com>"
    ],
    "dynamic_config" : 0,
-   "generated_by" : "Dist::Zilla version 5.021, CPAN::Meta::Converter version 2.142690",
+   "generated_by" : "Dist::Zilla version 5.025, CPAN::Meta::Converter version 2.142690",
    "license" : [
       "perl_5"
    ],
@@ -16,11 +16,13 @@
    "prereqs" : {
       "configure" : {
          "requires" : {
-            "ExtUtils::MakeMaker" : "0"
+            "ExtUtils::MakeMaker" : "0",
+            "perl" : "5.006"
          }
       },
       "develop" : {
          "requires" : {
+            "IPC::Signal" : "0",
             "Pod::Coverage::TrustPod" : "0",
             "Test::CPAN::Changes" : "0.19",
             "Test::EOL" : "0",
@@ -58,7 +60,7 @@
             "Time::HiRes" : "1.9726",
             "namespace::autoclean" : "0",
             "parent" : "0",
-            "perl" : "5.006",
+            "perl" : "5.010",
             "strict" : "0",
             "warnings" : "0"
          }
@@ -72,67 +74,71 @@
             "File::Spec" : "0",
             "IO::Handle" : "0",
             "IPC::Open3" : "0",
+            "IPC::Signal" : "0",
             "Log::Dispatch::Array" : "0",
             "Test::Differences" : "0",
             "Test::Fatal" : "0",
             "Test::More" : "0.88",
+            "Test::Requires" : "0",
+            "Try::Tiny" : "0",
+            "autodie" : "0",
             "lib" : "0",
-            "perl" : "5.006"
+            "perl" : "5.010"
          }
       }
    },
    "provides" : {
       "Stepford" : {
          "file" : "lib/Stepford.pm",
-         "version" : "0.002009"
+         "version" : "0.002010"
       },
       "Stepford::Error" : {
          "file" : "lib/Stepford/Error.pm",
-         "version" : "0.002009"
+         "version" : "0.002010"
       },
       "Stepford::FinalStep" : {
          "file" : "lib/Stepford/FinalStep.pm",
-         "version" : "0.002009"
+         "version" : "0.002010"
       },
       "Stepford::LoggerWithMoniker" : {
          "file" : "lib/Stepford/LoggerWithMoniker.pm",
-         "version" : "0.002009"
+         "version" : "0.002010"
       },
       "Stepford::Plan" : {
          "file" : "lib/Stepford/Plan.pm",
-         "version" : "0.002009"
+         "version" : "0.002010"
       },
       "Stepford::Planner" : {
          "file" : "lib/Stepford/Planner.pm",
-         "version" : "0.002009"
+         "version" : "0.002010"
       },
       "Stepford::Role::Step" : {
          "file" : "lib/Stepford/Role/Step.pm",
-         "version" : "0.002009"
+         "version" : "0.002010"
       },
       "Stepford::Role::Step::FileGenerator" : {
          "file" : "lib/Stepford/Role/Step/FileGenerator.pm",
-         "version" : "0.002009"
+         "version" : "0.002010"
       },
       "Stepford::Role::Step::FileGenerator::Atomic" : {
          "file" : "lib/Stepford/Role/Step/FileGenerator/Atomic.pm",
-         "version" : "0.002009"
+         "version" : "0.002010"
       },
       "Stepford::Trait::StepDependency" : {
          "file" : "lib/Stepford/Trait/StepDependency.pm",
-         "version" : "0.002009"
+         "version" : "0.002010"
       },
       "Stepford::Trait::StepProduction" : {
          "file" : "lib/Stepford/Trait/StepProduction.pm",
-         "version" : "0.002009"
+         "version" : "0.002010"
       },
       "Stepford::Types" : {
          "file" : "lib/Stepford/Types.pm",
-         "version" : "0.002009"
+         "version" : "0.002010"
       },
       "Stepford::Types::Internal" : {
          "file" : "lib/Stepford/Types/Internal.pm",
-         "version" : "0.002009"
+         "version" : "0.002010"
       }
    },
    "release_status" : "stable",
@@ -140,13 +146,14 @@
       "bugtracker" : {
          "web" : "https://github.com/maxmind/Stepford/issues"
       },
+      "homepage" : "http://metacpan.org/release/Stepford/",
       "repository" : {
          "type" : "git",
          "url" : "git://github.com/maxmind/Stepford.git",
          "web" : "https://github.com/maxmind/Stepford"
       }
    },
-   "version" : "0.002009",
+   "version" : "0.002010",
    "x_Dist_Zilla" : {
       "perl" : {
          "version" : "5.016003"
@@ -160,17 +167,17 @@
                }
             },
             "name" : "@MAXMIND/MakeMaker",
-            "version" : "5.021"
+            "version" : "5.025"
          },
          {
             "class" : "Dist::Zilla::Plugin::Authority",
             "name" : "@MAXMIND/Authority",
-            "version" : "1.006"
+            "version" : "1.009"
          },
          {
             "class" : "Dist::Zilla::Plugin::AutoPrereqs",
             "name" : "@MAXMIND/AutoPrereqs",
-            "version" : "5.021"
+            "version" : "5.025"
          },
          {
             "class" : "Dist::Zilla::Plugin::CopyFilesFromBuild",
@@ -196,7 +203,7 @@
                }
             },
             "name" : "@MAXMIND/GatherDir",
-            "version" : "5.021"
+            "version" : "5.025"
          },
          {
             "class" : "Dist::Zilla::Plugin::GitHub::Meta",
@@ -216,7 +223,7 @@
                      {
                         "class" : "Dist::Zilla::Plugin::FinderCode",
                         "name" : "@MAXMIND/MetaProvides::Package/AUTOVIV/:InstallModulesPM",
-                        "version" : "5.021"
+                        "version" : "5.025"
                      }
                   ]
                },
@@ -232,12 +239,12 @@
          {
             "class" : "Dist::Zilla::Plugin::NextRelease",
             "name" : "@MAXMIND/NextRelease",
-            "version" : "5.021"
+            "version" : "5.025"
          },
          {
             "class" : "Dist::Zilla::Plugin::Test::Pod::Coverage::Configurable",
             "name" : "@MAXMIND/Test::Pod::Coverage::Configurable",
-            "version" : "0.01"
+            "version" : "0.02"
          },
          {
             "class" : "Dist::Zilla::Plugin::Test::PodSpelling",
@@ -258,7 +265,7 @@
                }
             },
             "name" : "@MAXMIND/TestMoreDoneTesting",
-            "version" : "5.021"
+            "version" : "5.025"
          },
          {
             "class" : "Dist::Zilla::Plugin::PromptIfStale",
@@ -268,11 +275,14 @@
                   "check_all_prereqs" : "1",
                   "modules" : [],
                   "phase" : "release",
-                  "skip" : []
+                  "skip" : [
+                     "Dist::Zilla::Plugin::MAXMIND::Contributors",
+                     "Dist::Zilla::Plugin::MAXMIND::License"
+                  ]
                }
             },
             "name" : "@MAXMIND/stale modules, release",
-            "version" : "0.028"
+            "version" : "0.029"
          },
          {
             "class" : "Dist::Zilla::Plugin::ReadmeAnyFromPod",
@@ -287,57 +297,57 @@
          {
             "class" : "Dist::Zilla::Plugin::UploadToCPAN",
             "name" : "@MAXMIND/UploadToCPAN",
-            "version" : "5.021"
+            "version" : "5.025"
          },
          {
             "class" : "Dist::Zilla::Plugin::PruneCruft",
             "name" : "@MAXMIND/PruneCruft",
-            "version" : "5.021"
+            "version" : "5.025"
          },
          {
             "class" : "Dist::Zilla::Plugin::ManifestSkip",
             "name" : "@MAXMIND/ManifestSkip",
-            "version" : "5.021"
+            "version" : "5.025"
          },
          {
             "class" : "Dist::Zilla::Plugin::MetaYAML",
             "name" : "@MAXMIND/MetaYAML",
-            "version" : "5.021"
+            "version" : "5.025"
          },
          {
             "class" : "Dist::Zilla::Plugin::License",
             "name" : "@MAXMIND/License",
-            "version" : "5.021"
+            "version" : "5.025"
          },
          {
             "class" : "Dist::Zilla::Plugin::ExtraTests",
             "name" : "@MAXMIND/ExtraTests",
-            "version" : "5.021"
+            "version" : "5.025"
          },
          {
             "class" : "Dist::Zilla::Plugin::ExecDir",
             "name" : "@MAXMIND/ExecDir",
-            "version" : "5.021"
+            "version" : "5.025"
          },
          {
             "class" : "Dist::Zilla::Plugin::ShareDir",
             "name" : "@MAXMIND/ShareDir",
-            "version" : "5.021"
+            "version" : "5.025"
          },
          {
             "class" : "Dist::Zilla::Plugin::Manifest",
             "name" : "@MAXMIND/Manifest",
-            "version" : "5.021"
+            "version" : "5.025"
          },
          {
             "class" : "Dist::Zilla::Plugin::TestRelease",
             "name" : "@MAXMIND/TestRelease",
-            "version" : "5.021"
+            "version" : "5.025"
          },
          {
             "class" : "Dist::Zilla::Plugin::ConfirmRelease",
             "name" : "@MAXMIND/ConfirmRelease",
-            "version" : "5.021"
+            "version" : "5.025"
          },
          {
             "class" : "Dist::Zilla::Plugin::CheckPrereqsIndexed",
@@ -347,7 +357,7 @@
          {
             "class" : "Dist::Zilla::Plugin::CPANFile",
             "name" : "@MAXMIND/CPANFile",
-            "version" : "5.021"
+            "version" : "5.025"
          },
          {
             "class" : "Dist::Zilla::Plugin::Git::CheckFor::CorrectBranch",
@@ -390,17 +400,17 @@
          {
             "class" : "Dist::Zilla::Plugin::InstallGuide",
             "name" : "@MAXMIND/InstallGuide",
-            "version" : "1.200003"
+            "version" : "1.200005"
          },
          {
             "class" : "Dist::Zilla::Plugin::MAXMIND::Contributors",
             "name" : "@MAXMIND/MAXMIND::Contributors",
-            "version" : null
+            "version" : "0.04"
          },
          {
             "class" : "Dist::Zilla::Plugin::MAXMIND::License",
             "name" : "@MAXMIND/MAXMIND::License",
-            "version" : null
+            "version" : "0.04"
          },
          {
             "class" : "Dist::Zilla::Plugin::Meta::Contributors",
@@ -410,22 +420,22 @@
          {
             "class" : "Dist::Zilla::Plugin::MetaConfig",
             "name" : "@MAXMIND/MetaConfig",
-            "version" : "5.021"
+            "version" : "5.025"
          },
          {
             "class" : "Dist::Zilla::Plugin::MetaJSON",
             "name" : "@MAXMIND/MetaJSON",
-            "version" : "5.021"
+            "version" : "5.025"
          },
          {
             "class" : "Dist::Zilla::Plugin::MinimumPerl",
             "name" : "@MAXMIND/MinimumPerl",
-            "version" : "1.003"
+            "version" : "1.006"
          },
          {
             "class" : "Dist::Zilla::Plugin::PkgVersion",
             "name" : "@MAXMIND/PkgVersion",
-            "version" : "5.021"
+            "version" : "5.025"
          },
          {
             "class" : "Dist::Zilla::Plugin::SurgicalPodWeaver",
@@ -500,17 +510,12 @@
                }
             },
             "name" : "@MAXMIND/SurgicalPodWeaver",
-            "version" : "0.0021"
-         },
-         {
-            "class" : "Dist::Zilla::Plugin::EOLTests",
-            "name" : "@MAXMIND/EOLTests",
-            "version" : "0.13"
+            "version" : "0.0023"
          },
          {
             "class" : "Dist::Zilla::Plugin::PodSyntaxTests",
             "name" : "@MAXMIND/PodSyntaxTests",
-            "version" : "5.021"
+            "version" : "5.025"
          },
          {
             "class" : "Dist::Zilla::Plugin::Test::CPAN::Changes",
@@ -540,6 +545,16 @@
             "version" : "2.051"
          },
          {
+            "class" : "Dist::Zilla::Plugin::Test::EOL",
+            "config" : {
+               "Dist::Zilla::Plugin::Test::EOL" : {
+                  "filename" : "xt/author/eol.t"
+               }
+            },
+            "name" : "@MAXMIND/Test::EOL",
+            "version" : "0.15"
+         },
+         {
             "class" : "Dist::Zilla::Plugin::Test::NoTabs",
             "config" : {
                "Dist::Zilla::Plugin::Test::NoTabs" : {
@@ -553,16 +568,6 @@
             },
             "name" : "@MAXMIND/Test::NoTabs",
             "version" : "0.09"
-         },
-         {
-            "class" : "Dist::Zilla::Plugin::Test::Pod::LinkCheck",
-            "name" : "@MAXMIND/Test::Pod::LinkCheck",
-            "version" : "1.001"
-         },
-         {
-            "class" : "Dist::Zilla::Plugin::Test::Pod::No404s",
-            "name" : "@MAXMIND/Test::Pod::No404s",
-            "version" : "1.001"
          },
          {
             "class" : "Dist::Zilla::Plugin::Test::Portability",
@@ -582,6 +587,7 @@
                },
                "Dist::Zilla::Role::Git::DirtyFiles" : {
                   "allow_dirty" : [
+                     ".mailmap",
                      "Changes",
                      "cpanfile",
                      "CONTRIBUTING.md",
@@ -609,6 +615,7 @@
                },
                "Dist::Zilla::Role::Git::DirtyFiles" : {
                   "allow_dirty" : [
+                     ".mailmap",
                      "Changes",
                      "cpanfile",
                      "CONTRIBUTING.md",
@@ -632,7 +639,7 @@
                "Dist::Zilla::Plugin::Git::Tag" : {
                   "branch" : null,
                   "signed" : 0,
-                  "tag" : "v0.002009",
+                  "tag" : "v0.002010",
                   "tag_format" : "v%v",
                   "tag_message" : "v%v",
                   "time_zone" : "local"
@@ -661,49 +668,60 @@
             "version" : "2.025"
          },
          {
+            "class" : "Dist::Zilla::Plugin::Prereqs",
+            "config" : {
+               "Dist::Zilla::Plugin::Prereqs" : {
+                  "phase" : "develop",
+                  "type" : "requires"
+               }
+            },
+            "name" : "DevelopRequires",
+            "version" : "5.025"
+         },
+         {
             "class" : "Dist::Zilla::Plugin::FinderCode",
             "name" : ":InstallModules",
-            "version" : "5.021"
+            "version" : "5.025"
          },
          {
             "class" : "Dist::Zilla::Plugin::FinderCode",
             "name" : ":IncModules",
-            "version" : "5.021"
+            "version" : "5.025"
          },
          {
             "class" : "Dist::Zilla::Plugin::FinderCode",
             "name" : ":TestFiles",
-            "version" : "5.021"
+            "version" : "5.025"
          },
          {
             "class" : "Dist::Zilla::Plugin::FinderCode",
             "name" : ":ExecFiles",
-            "version" : "5.021"
+            "version" : "5.025"
          },
          {
             "class" : "Dist::Zilla::Plugin::FinderCode",
             "name" : ":ShareFiles",
-            "version" : "5.021"
+            "version" : "5.025"
          },
          {
             "class" : "Dist::Zilla::Plugin::FinderCode",
             "name" : ":MainModule",
-            "version" : "5.021"
+            "version" : "5.025"
          },
          {
             "class" : "Dist::Zilla::Plugin::FinderCode",
             "name" : ":AllFiles",
-            "version" : "5.021"
+            "version" : "5.025"
          },
          {
             "class" : "Dist::Zilla::Plugin::FinderCode",
             "name" : ":NoFiles",
-            "version" : "5.021"
+            "version" : "5.025"
          },
          {
             "class" : "Dist::Zilla::Plugin::FinderCode",
             "name" : "@MAXMIND/MetaProvides::Package/AUTOVIV/:InstallModulesPM",
-            "version" : "5.021"
+            "version" : "5.025"
          }
       ],
       "zilla" : {
@@ -711,7 +729,7 @@
          "config" : {
             "is_trial" : "0"
          },
-         "version" : "5.021"
+         "version" : "5.025"
       }
    },
    "x_authority" : "cpan:MAXMIND",
