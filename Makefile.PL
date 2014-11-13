@@ -41,6 +41,7 @@ my %WriteMakefileArgs = (
     "Parallel::ForkManager" => 0,
     "Path::Class" => 0,
     "Scalar::Util" => 0,
+    "Scope::Guard" => 0,
     "Throwable::Error" => 0,
     "Time::HiRes" => "1.9726",
     "namespace::autoclean" => 0,
@@ -63,7 +64,7 @@ my %WriteMakefileArgs = (
     "autodie" => 0,
     "lib" => 0
   },
-  "VERSION" => "0.002010",
+  "VERSION" => "0.002011",
   "test" => {
     "TESTS" => "t/*.t"
   }
@@ -97,6 +98,7 @@ my %FallbackPrereqs = (
   "Parallel::ForkManager" => 0,
   "Path::Class" => 0,
   "Scalar::Util" => 0,
+  "Scope::Guard" => 0,
   "Test::Differences" => 0,
   "Test::Fatal" => 0,
   "Test::More" => "0.88",

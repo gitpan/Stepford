@@ -1,6 +1,6 @@
 package Stepford;
-# git description: v0.002009-8-gcf5f2a2
-$Stepford::VERSION = '0.002010';
+# git description: v0.002010-3-gc48a5be
+$Stepford::VERSION = '0.002011';
 
 use strict;
 use warnings;
@@ -19,7 +19,7 @@ Stepford - A vaguely Rake/Make/Cake-like thing for Perl - create steps and let a
 
 =head1 VERSION
 
-version 0.002010
+version 0.002011
 
 =head1 SYNOPSIS
 

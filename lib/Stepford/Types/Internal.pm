@@ -1,5 +1,5 @@
 package Stepford::Types::Internal;
-$Stepford::Types::Internal::VERSION = '0.002010';
+$Stepford::Types::Internal::VERSION = '0.002011';
 use strict;
 use warnings;
 
@@ -64,7 +64,7 @@ Stepford::Types::Internal - Internal type definitions for Stepford
 
 =head1 VERSION
 
-version 0.002010
+version 0.002011
 
 =head1 AUTHOR
 

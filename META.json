@@ -56,6 +56,7 @@
             "Parallel::ForkManager" : "0",
             "Path::Class" : "0",
             "Scalar::Util" : "0",
+            "Scope::Guard" : "0",
             "Throwable::Error" : "0",
             "Time::HiRes" : "1.9726",
             "namespace::autoclean" : "0",
@@ -90,55 +91,55 @@
    "provides" : {
       "Stepford" : {
          "file" : "lib/Stepford.pm",
-         "version" : "0.002010"
+         "version" : "0.002011"
       },
       "Stepford::Error" : {
          "file" : "lib/Stepford/Error.pm",
-         "version" : "0.002010"
+         "version" : "0.002011"
       },
       "Stepford::FinalStep" : {
          "file" : "lib/Stepford/FinalStep.pm",
-         "version" : "0.002010"
+         "version" : "0.002011"
       },
       "Stepford::LoggerWithMoniker" : {
          "file" : "lib/Stepford/LoggerWithMoniker.pm",
-         "version" : "0.002010"
+         "version" : "0.002011"
       },
       "Stepford::Plan" : {
          "file" : "lib/Stepford/Plan.pm",
-         "version" : "0.002010"
+         "version" : "0.002011"
       },
       "Stepford::Planner" : {
          "file" : "lib/Stepford/Planner.pm",
-         "version" : "0.002010"
+         "version" : "0.002011"
       },
       "Stepford::Role::Step" : {
          "file" : "lib/Stepford/Role/Step.pm",
-         "version" : "0.002010"
+         "version" : "0.002011"
       },
       "Stepford::Role::Step::FileGenerator" : {
          "file" : "lib/Stepford/Role/Step/FileGenerator.pm",
-         "version" : "0.002010"
+         "version" : "0.002011"
       },
       "Stepford::Role::Step::FileGenerator::Atomic" : {
          "file" : "lib/Stepford/Role/Step/FileGenerator/Atomic.pm",
-         "version" : "0.002010"
+         "version" : "0.002011"
       },
       "Stepford::Trait::StepDependency" : {
          "file" : "lib/Stepford/Trait/StepDependency.pm",
-         "version" : "0.002010"
+         "version" : "0.002011"
       },
       "Stepford::Trait::StepProduction" : {
          "file" : "lib/Stepford/Trait/StepProduction.pm",
-         "version" : "0.002010"
+         "version" : "0.002011"
       },
       "Stepford::Types" : {
          "file" : "lib/Stepford/Types.pm",
-         "version" : "0.002010"
+         "version" : "0.002011"
       },
       "Stepford::Types::Internal" : {
          "file" : "lib/Stepford/Types/Internal.pm",
-         "version" : "0.002010"
+         "version" : "0.002011"
       }
    },
    "release_status" : "stable",
@@ -153,7 +154,7 @@
          "web" : "https://github.com/maxmind/Stepford"
       }
    },
-   "version" : "0.002010",
+   "version" : "0.002011",
    "x_Dist_Zilla" : {
       "perl" : {
          "version" : "5.016003"
@@ -282,7 +283,7 @@
                }
             },
             "name" : "@MAXMIND/stale modules, release",
-            "version" : "0.029"
+            "version" : "0.030"
          },
          {
             "class" : "Dist::Zilla::Plugin::ReadmeAnyFromPod",
@@ -449,52 +450,52 @@
                      {
                         "class" : "Pod::Weaver::Plugin::EnsurePod5",
                         "name" : "@CorePrep/EnsurePod5",
-                        "version" : "4.006"
+                        "version" : "4.008"
                      },
                      {
                         "class" : "Pod::Weaver::Plugin::H1Nester",
                         "name" : "@CorePrep/H1Nester",
-                        "version" : "4.006"
+                        "version" : "4.008"
                      },
                      {
                         "class" : "Pod::Weaver::Section::Name",
                         "name" : "Name",
-                        "version" : "4.006"
+                        "version" : "4.008"
                      },
                      {
                         "class" : "Pod::Weaver::Section::Version",
                         "name" : "Version",
-                        "version" : "4.006"
+                        "version" : "4.008"
                      },
                      {
                         "class" : "Pod::Weaver::Section::Region",
                         "name" : "prelude",
-                        "version" : "4.006"
+                        "version" : "4.008"
                      },
                      {
                         "class" : "Pod::Weaver::Section::Generic",
                         "name" : "SYNOPSIS",
-                        "version" : "4.006"
+                        "version" : "4.008"
                      },
                      {
                         "class" : "Pod::Weaver::Section::Generic",
                         "name" : "DESCRIPTION",
-                        "version" : "4.006"
+                        "version" : "4.008"
                      },
                      {
                         "class" : "Pod::Weaver::Section::Leftovers",
                         "name" : "Leftovers",
-                        "version" : "4.006"
+                        "version" : "4.008"
                      },
                      {
                         "class" : "Pod::Weaver::Section::Region",
                         "name" : "postlude",
-                        "version" : "4.006"
+                        "version" : "4.008"
                      },
                      {
                         "class" : "Pod::Weaver::Section::Authors",
                         "name" : "Authors",
-                        "version" : "4.006"
+                        "version" : "4.008"
                      },
                      {
                         "class" : "Pod::Weaver::Section::Contributors",
@@ -504,7 +505,7 @@
                      {
                         "class" : "Pod::Weaver::Section::Legal",
                         "name" : "Legal",
-                        "version" : "4.006"
+                        "version" : "4.008"
                      }
                   ]
                }
@@ -639,7 +640,7 @@
                "Dist::Zilla::Plugin::Git::Tag" : {
                   "branch" : null,
                   "signed" : 0,
-                  "tag" : "v0.002010",
+                  "tag" : "v0.002011",
                   "tag_format" : "v%v",
                   "tag_message" : "v%v",
                   "time_zone" : "local"

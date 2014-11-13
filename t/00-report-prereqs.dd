@@ -41,6 +41,7 @@ do { my $x = {
                                       'Parallel::ForkManager' => '0',
                                       'Path::Class' => '0',
                                       'Scalar::Util' => '0',
+                                      'Scope::Guard' => '0',
                                       'Throwable::Error' => '0',
                                       'Time::HiRes' => '1.9726',
                                       'namespace::autoclean' => '0',
