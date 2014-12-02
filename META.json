@@ -1,10 +1,10 @@
 {
-   "abstract" : "A vaguely Rake/Make/Cake-like thing for Perl - create steps and let a planner run them",
+   "abstract" : "A vaguely Rake/Make/Cake-like thing for Perl - create steps and let a runner run them",
    "author" : [
       "Dave Rolsky <drolsky@maxmind.com>"
    ],
    "dynamic_config" : 0,
-   "generated_by" : "Dist::Zilla version 5.025, CPAN::Meta::Converter version 2.142690",
+   "generated_by" : "Dist::Zilla version 5.025, CPAN::Meta::Converter version 2.143240",
    "license" : [
       "perl_5"
    ],
@@ -81,6 +81,7 @@
             "Test::Fatal" : "0",
             "Test::More" : "0.88",
             "Test::Requires" : "0",
+            "Test::Warnings" : "0",
             "Try::Tiny" : "0",
             "autodie" : "0",
             "lib" : "0",
@@ -91,55 +92,67 @@
    "provides" : {
       "Stepford" : {
          "file" : "lib/Stepford.pm",
-         "version" : "0.002011"
+         "version" : "0.003000"
       },
       "Stepford::Error" : {
          "file" : "lib/Stepford/Error.pm",
-         "version" : "0.002011"
+         "version" : "0.003000"
       },
       "Stepford::FinalStep" : {
          "file" : "lib/Stepford/FinalStep.pm",
-         "version" : "0.002011"
+         "version" : "0.003000"
       },
       "Stepford::LoggerWithMoniker" : {
          "file" : "lib/Stepford/LoggerWithMoniker.pm",
-         "version" : "0.002011"
+         "version" : "0.003000"
       },
       "Stepford::Plan" : {
          "file" : "lib/Stepford/Plan.pm",
-         "version" : "0.002011"
+         "version" : "0.003000"
       },
       "Stepford::Planner" : {
          "file" : "lib/Stepford/Planner.pm",
-         "version" : "0.002011"
+         "version" : "0.003000"
       },
       "Stepford::Role::Step" : {
          "file" : "lib/Stepford/Role/Step.pm",
-         "version" : "0.002011"
+         "version" : "0.003000"
       },
       "Stepford::Role::Step::FileGenerator" : {
          "file" : "lib/Stepford/Role/Step/FileGenerator.pm",
-         "version" : "0.002011"
+         "version" : "0.003000"
       },
       "Stepford::Role::Step::FileGenerator::Atomic" : {
          "file" : "lib/Stepford/Role/Step/FileGenerator/Atomic.pm",
-         "version" : "0.002011"
+         "version" : "0.003000"
+      },
+      "Stepford::Role::Step::Unserializable" : {
+         "file" : "lib/Stepford/Role/Step/Unserializable.pm",
+         "version" : "0.003000"
+      },
+      "Stepford::Runner" : {
+         "file" : "lib/Stepford/Runner.pm",
+         "version" : "0.003000"
+      },
+      "Stepford::Runner::State" : {
+         "file" : "lib/Stepford/Runner/State.pm",
+         "version" : "0.003000"
       },
       "Stepford::Trait::StepDependency" : {
          "file" : "lib/Stepford/Trait/StepDependency.pm",
-         "version" : "0.002011"
+         "version" : "0.003000"
       },
       "Stepford::Trait::StepProduction" : {
          "file" : "lib/Stepford/Trait/StepProduction.pm",
-         "version" : "0.002011"
+         "version" : "0.003000"
       },
       "Stepford::Types" : {
          "file" : "lib/Stepford/Types.pm",
-         "version" : "0.002011"
+         "version" : "0.003000"
       },
       "Stepford::Types::Internal" : {
          "file" : "lib/Stepford/Types/Internal.pm",
-         "version" : "0.002011"
+         "version" : "0.003000"
       }
    },
    "release_status" : "stable",
@@ -154,7 +167,7 @@
          "web" : "https://github.com/maxmind/Stepford"
       }
    },
-   "version" : "0.002011",
+   "version" : "0.003000",
    "x_Dist_Zilla" : {
       "perl" : {
          "version" : "5.016003"
@@ -283,7 +296,7 @@
                }
             },
             "name" : "@MAXMIND/stale modules, release",
-            "version" : "0.030"
+            "version" : "0.032"
          },
          {
             "class" : "Dist::Zilla::Plugin::ReadmeAnyFromPod",
@@ -353,7 +366,7 @@
          {
             "class" : "Dist::Zilla::Plugin::CheckPrereqsIndexed",
             "name" : "@MAXMIND/CheckPrereqsIndexed",
-            "version" : "0.012"
+            "version" : "0.013"
          },
          {
             "class" : "Dist::Zilla::Plugin::CPANFile",
@@ -553,7 +566,7 @@
                }
             },
             "name" : "@MAXMIND/Test::EOL",
-            "version" : "0.15"
+            "version" : "0.16"
          },
          {
             "class" : "Dist::Zilla::Plugin::Test::NoTabs",
@@ -604,7 +617,7 @@
                }
             },
             "name" : "@MAXMIND/Git::Check",
-            "version" : "2.025"
+            "version" : "2.028"
          },
          {
             "class" : "Dist::Zilla::Plugin::Git::Commit",
@@ -632,7 +645,7 @@
                }
             },
             "name" : "@MAXMIND/Git::Commit",
-            "version" : "2.025"
+            "version" : "2.028"
          },
          {
             "class" : "Dist::Zilla::Plugin::Git::Tag",
@@ -640,7 +653,7 @@
                "Dist::Zilla::Plugin::Git::Tag" : {
                   "branch" : null,
                   "signed" : 0,
-                  "tag" : "v0.002011",
+                  "tag" : "v0.003000",
                   "tag_format" : "v%v",
                   "tag_message" : "v%v",
                   "time_zone" : "local"
@@ -650,7 +663,7 @@
                }
             },
             "name" : "@MAXMIND/Git::Tag",
-            "version" : "2.025"
+            "version" : "2.028"
          },
          {
             "class" : "Dist::Zilla::Plugin::Git::Push",
@@ -666,7 +679,7 @@
                }
             },
             "name" : "@MAXMIND/Git::Push",
-            "version" : "2.025"
+            "version" : "2.028"
          },
          {
             "class" : "Dist::Zilla::Plugin::Prereqs",

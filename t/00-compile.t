@@ -6,7 +6,7 @@ use warnings;
 
 use Test::More;
 
-plan tests => 13 + ($ENV{AUTHOR_TESTING} ? 1 : 0);
+plan tests => 16 + ($ENV{AUTHOR_TESTING} ? 1 : 0);
 
 my @module_files = (
     'Stepford.pm',
@@ -18,6 +18,9 @@ my @module_files = (
     'Stepford/Role/Step.pm',
     'Stepford/Role/Step/FileGenerator.pm',
     'Stepford/Role/Step/FileGenerator/Atomic.pm',
+    'Stepford/Role/Step/Unserializable.pm',
+    'Stepford/Runner.pm',
+    'Stepford/Runner/State.pm',
     'Stepford/Trait/StepDependency.pm',
     'Stepford/Trait/StepProduction.pm',
     'Stepford/Types.pm',

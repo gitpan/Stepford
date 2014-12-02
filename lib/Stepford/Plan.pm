@@ -1,5 +1,5 @@
 package Stepford::Plan;
-$Stepford::Plan::VERSION = '0.002011';
+$Stepford::Plan::VERSION = '0.003000';
 use strict;
 use warnings;
 use namespace::autoclean;
@@ -179,7 +179,7 @@ __PACKAGE__->meta()->make_immutable();
 
 1;
 
-# ABSTRACT: Represents a concrete plan for execution by a Stepford::Planner
+# ABSTRACT: Represents a concrete plan for execution by a Stepford::Runner
 
 __END__
 
@@ -187,11 +187,11 @@ __END__
 
 =head1 NAME
 
-Stepford::Plan - Represents a concrete plan for execution by a Stepford::Planner
+Stepford::Plan - Represents a concrete plan for execution by a Stepford::Runner
 
 =head1 VERSION
 
-version 0.002011
+version 0.003000
 
 =head1 DESCRIPTION
 

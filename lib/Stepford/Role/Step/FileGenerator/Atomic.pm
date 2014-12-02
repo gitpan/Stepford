@@ -1,5 +1,5 @@
 package Stepford::Role::Step::FileGenerator::Atomic;
-$Stepford::Role::Step::FileGenerator::Atomic::VERSION = '0.002011';
+$Stepford::Role::Step::FileGenerator::Atomic::VERSION = '0.003000';
 use strict;
 use warnings;
 use namespace::autoclean;
@@ -82,7 +82,7 @@ Stepford::Role::Step::FileGenerator::Atomic - A role for steps that generate a f
 
 =head1 VERSION
 
-version 0.002011
+version 0.003000
 
 =head1 DESCRIPTION
 

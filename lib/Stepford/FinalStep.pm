@@ -1,5 +1,5 @@
 package Stepford::FinalStep;
-$Stepford::FinalStep::VERSION = '0.002011';
+$Stepford::FinalStep::VERSION = '0.003000';
 use strict;
 use warnings;
 use namespace::autoclean;
@@ -38,12 +38,12 @@ Stepford::FinalStep - The final step for all Stepford runs
 
 =head1 VERSION
 
-version 0.002011
+version 0.003000
 
 =head1 DESCRIPTION
 
 This step just logs the message "Completed execution". It is always run as the
-last step when calling C<run()> on a L<Stepford::Planner> object.
+last step when calling C<run()> on a L<Stepford::Runner> object.
 
 =for Pod::Coverage .*
 

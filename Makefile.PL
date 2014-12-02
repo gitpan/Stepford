@@ -10,7 +10,7 @@ use ExtUtils::MakeMaker;
 
 
 my %WriteMakefileArgs = (
-  "ABSTRACT" => "A vaguely Rake/Make/Cake-like thing for Perl - create steps and let a planner run them",
+  "ABSTRACT" => "A vaguely Rake/Make/Cake-like thing for Perl - create steps and let a runner run them",
   "AUTHOR" => "Dave Rolsky <drolsky\@maxmind.com>",
   "CONFIGURE_REQUIRES" => {
     "ExtUtils::MakeMaker" => 0
@@ -60,11 +60,12 @@ my %WriteMakefileArgs = (
     "Test::Fatal" => 0,
     "Test::More" => "0.88",
     "Test::Requires" => 0,
+    "Test::Warnings" => 0,
     "Try::Tiny" => 0,
     "autodie" => 0,
     "lib" => 0
   },
-  "VERSION" => "0.002011",
+  "VERSION" => "0.003000",
   "test" => {
     "TESTS" => "t/*.t"
   }
@@ -103,6 +104,7 @@ my %FallbackPrereqs = (
   "Test::Fatal" => 0,
   "Test::More" => "0.88",
   "Test::Requires" => 0,
+  "Test::Warnings" => 0,
   "Throwable::Error" => 0,
   "Time::HiRes" => "1.9726",
   "Try::Tiny" => 0,

@@ -1,5 +1,5 @@
 package Stepford::LoggerWithMoniker;
-$Stepford::LoggerWithMoniker::VERSION = '0.002011';
+$Stepford::LoggerWithMoniker::VERSION = '0.003000';
 use strict;
 use warnings;
 
@@ -50,11 +50,11 @@ Stepford::LoggerWithMoniker - The logger used by Step classes.
 
 =head1 VERSION
 
-version 0.002011
+version 0.003000
 
 =head1 DESCRIPTION
 
-This class wraps the logger passed in by the Planner. It prefixes the messages
+This class wraps the logger passed in by the Runner. It prefixes the messages
 with the step name. This class has no user-facing parts.
 
 =head1 AUTHOR

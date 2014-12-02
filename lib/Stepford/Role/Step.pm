@@ -1,5 +1,5 @@
 package Stepford::Role::Step;
-$Stepford::Role::Step::VERSION = '0.002011';
+$Stepford::Role::Step::VERSION = '0.003000';
 use strict;
 use warnings;
 use namespace::autoclean;
@@ -57,12 +57,11 @@ sub has_production {
     return any { $_->name() eq $name } $class->productions();
 }
 
-sub productions_as_hash {
+sub productions_as_hashref {
     my $self = shift;
 
-    return
-        map { $_->name() => $self->production_value( $_->name() ) }
-        $self->productions();
+    return { map { $_->name() => $self->production_value( $_->name() ) }
+            $self->productions() };
 }
 
 sub production_value {
@@ -96,12 +95,12 @@ Stepford::Role::Step - The basic role all step classes must implement
 
 =head1 VERSION
 
-version 0.002011
+version 0.003000
 
 =head1 DESCRIPTION
 
 All of your step classes must consume this role. It provides the basic
-interface that the L<Stepford::Planner> class expects.
+interface that the L<Stepford::Runner> class expects.
 
 =head1 ATTRIBUTES
 
@@ -110,7 +109,7 @@ This role provides one attribute:
 =head2 logger
 
 This attribute is required for all roles. It will be provided to your step
-classes by the L<Stepford::Planner> object.
+classes by the L<Stepford::Runner> object.
 
 The Step object will wrap the logger with an object that prepends prepends
 C<[$log_moniker] > to each log message. The moniker is determined by calling
@@ -129,9 +128,9 @@ given the C<StepProduction> trait. This can be an empty list.
 
 Returns true if the step has a production of the given name.
 
-=head2 $step->productions_as_hash()
+=head2 $step->productions_as_hashref()
 
-Returns all production values as a hash.
+Returns all production values as a hash reference.
 
 =head2 $step->production_value($name)
 
