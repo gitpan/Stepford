@@ -1,5 +1,5 @@
 package Stepford::Plan;
-$Stepford::Plan::VERSION = '0.003000';
+$Stepford::Plan::VERSION = '0.003001';
 use strict;
 use warnings;
 use namespace::autoclean;
@@ -191,7 +191,7 @@ Stepford::Plan - Represents a concrete plan for execution by a Stepford::Runner
 
 =head1 VERSION
 
-version 0.003000
+version 0.003001
 
 =head1 DESCRIPTION
 

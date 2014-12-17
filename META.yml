@@ -4,6 +4,7 @@ author:
   - 'Dave Rolsky <drolsky@maxmind.com>'
 build_requires:
   ExtUtils::MakeMaker: '0'
+  File::Copy: '0'
   File::Spec: '0'
   IO::Handle: '0'
   IPC::Open3: '0'
@@ -22,7 +23,7 @@ configure_requires:
   ExtUtils::MakeMaker: '0'
   perl: '5.006'
 dynamic_config: 0
-generated_by: 'Dist::Zilla version 5.025, CPAN::Meta::Converter version 2.143240'
+generated_by: 'Dist::Zilla version 5.029, CPAN::Meta::Converter version 2.143240'
 license: perl
 meta-spec:
   url: http://module-build.sourceforge.net/META-spec-v1.4.html
@@ -31,52 +32,52 @@ name: Stepford
 provides:
   Stepford:
     file: lib/Stepford.pm
-    version: '0.003000'
+    version: '0.003001'
   Stepford::Error:
     file: lib/Stepford/Error.pm
-    version: '0.003000'
+    version: '0.003001'
   Stepford::FinalStep:
     file: lib/Stepford/FinalStep.pm
-    version: '0.003000'
+    version: '0.003001'
   Stepford::LoggerWithMoniker:
     file: lib/Stepford/LoggerWithMoniker.pm
-    version: '0.003000'
+    version: '0.003001'
   Stepford::Plan:
     file: lib/Stepford/Plan.pm
-    version: '0.003000'
+    version: '0.003001'
   Stepford::Planner:
     file: lib/Stepford/Planner.pm
-    version: '0.003000'
+    version: '0.003001'
   Stepford::Role::Step:
     file: lib/Stepford/Role/Step.pm
-    version: '0.003000'
+    version: '0.003001'
   Stepford::Role::Step::FileGenerator:
     file: lib/Stepford/Role/Step/FileGenerator.pm
-    version: '0.003000'
+    version: '0.003001'
   Stepford::Role::Step::FileGenerator::Atomic:
     file: lib/Stepford/Role/Step/FileGenerator/Atomic.pm
-    version: '0.003000'
+    version: '0.003001'
   Stepford::Role::Step::Unserializable:
     file: lib/Stepford/Role/Step/Unserializable.pm
-    version: '0.003000'
+    version: '0.003001'
   Stepford::Runner:
     file: lib/Stepford/Runner.pm
-    version: '0.003000'
+    version: '0.003001'
   Stepford::Runner::State:
     file: lib/Stepford/Runner/State.pm
-    version: '0.003000'
+    version: '0.003001'
   Stepford::Trait::StepDependency:
     file: lib/Stepford/Trait/StepDependency.pm
-    version: '0.003000'
+    version: '0.003001'
   Stepford::Trait::StepProduction:
     file: lib/Stepford/Trait/StepProduction.pm
-    version: '0.003000'
+    version: '0.003001'
   Stepford::Types:
     file: lib/Stepford/Types.pm
-    version: '0.003000'
+    version: '0.003001'
   Stepford::Types::Internal:
     file: lib/Stepford/Types/Internal.pm
-    version: '0.003000'
+    version: '0.003001'
 requires:
   Carp: '0'
   File::Temp: '0'
@@ -110,7 +111,7 @@ resources:
   bugtracker: https://github.com/maxmind/Stepford/issues
   homepage: http://metacpan.org/release/Stepford/
   repository: git://github.com/maxmind/Stepford.git
-version: '0.003000'
+version: '0.003001'
 x_Dist_Zilla:
   perl:
     version: '5.016003'
@@ -121,7 +122,7 @@ x_Dist_Zilla:
         Dist::Zilla::Role::TestRunner:
           default_jobs: 1
       name: '@MAXMIND/MakeMaker'
-      version: '5.025'
+      version: '5.029'
     -
       class: Dist::Zilla::Plugin::Authority
       name: '@MAXMIND/Authority'
@@ -129,7 +130,7 @@ x_Dist_Zilla:
     -
       class: Dist::Zilla::Plugin::AutoPrereqs
       name: '@MAXMIND/AutoPrereqs'
-      version: '5.025'
+      version: '5.029'
     -
       class: Dist::Zilla::Plugin::CopyFilesFromBuild
       name: '@MAXMIND/CopyFilesFromBuild'
@@ -150,7 +151,7 @@ x_Dist_Zilla:
           prune_directory: []
           root: .
       name: '@MAXMIND/GatherDir'
-      version: '5.025'
+      version: '5.029'
     -
       class: Dist::Zilla::Plugin::GitHub::Meta
       name: '@MAXMIND/GitHub::Meta'
@@ -167,7 +168,7 @@ x_Dist_Zilla:
             -
               class: Dist::Zilla::Plugin::FinderCode
               name: '@MAXMIND/MetaProvides::Package/AUTOVIV/:InstallModulesPM'
-              version: '5.025'
+              version: '5.029'
         Dist::Zilla::Role::MetaProvider::Provider:
           inherit_missing: '1'
           inherit_version: '1'
@@ -177,7 +178,7 @@ x_Dist_Zilla:
     -
       class: Dist::Zilla::Plugin::NextRelease
       name: '@MAXMIND/NextRelease'
-      version: '5.025'
+      version: '5.029'
     -
       class: Dist::Zilla::Plugin::Test::Pod::Coverage::Configurable
       name: '@MAXMIND/Test::Pod::Coverage::Configurable'
@@ -197,7 +198,7 @@ x_Dist_Zilla:
           phase: test
           type: requires
       name: '@MAXMIND/TestMoreDoneTesting'
-      version: '5.025'
+      version: '5.029'
     -
       class: Dist::Zilla::Plugin::PromptIfStale
       config:
@@ -222,47 +223,47 @@ x_Dist_Zilla:
     -
       class: Dist::Zilla::Plugin::UploadToCPAN
       name: '@MAXMIND/UploadToCPAN'
-      version: '5.025'
+      version: '5.029'
     -
       class: Dist::Zilla::Plugin::PruneCruft
       name: '@MAXMIND/PruneCruft'
-      version: '5.025'
+      version: '5.029'
     -
       class: Dist::Zilla::Plugin::ManifestSkip
       name: '@MAXMIND/ManifestSkip'
-      version: '5.025'
+      version: '5.029'
     -
       class: Dist::Zilla::Plugin::MetaYAML
       name: '@MAXMIND/MetaYAML'
-      version: '5.025'
+      version: '5.029'
     -
       class: Dist::Zilla::Plugin::License
       name: '@MAXMIND/License'
-      version: '5.025'
+      version: '5.029'
     -
       class: Dist::Zilla::Plugin::ExtraTests
       name: '@MAXMIND/ExtraTests'
-      version: '5.025'
+      version: '5.029'
     -
       class: Dist::Zilla::Plugin::ExecDir
       name: '@MAXMIND/ExecDir'
-      version: '5.025'
+      version: '5.029'
     -
       class: Dist::Zilla::Plugin::ShareDir
       name: '@MAXMIND/ShareDir'
-      version: '5.025'
+      version: '5.029'
     -
       class: Dist::Zilla::Plugin::Manifest
       name: '@MAXMIND/Manifest'
-      version: '5.025'
+      version: '5.029'
     -
       class: Dist::Zilla::Plugin::TestRelease
       name: '@MAXMIND/TestRelease'
-      version: '5.025'
+      version: '5.029'
     -
       class: Dist::Zilla::Plugin::ConfirmRelease
       name: '@MAXMIND/ConfirmRelease'
-      version: '5.025'
+      version: '5.029'
     -
       class: Dist::Zilla::Plugin::CheckPrereqsIndexed
       name: '@MAXMIND/CheckPrereqsIndexed'
@@ -270,7 +271,7 @@ x_Dist_Zilla:
     -
       class: Dist::Zilla::Plugin::CPANFile
       name: '@MAXMIND/CPANFile'
-      version: '5.025'
+      version: '5.029'
     -
       class: Dist::Zilla::Plugin::Git::CheckFor::CorrectBranch
       config:
@@ -318,11 +319,11 @@ x_Dist_Zilla:
     -
       class: Dist::Zilla::Plugin::MetaConfig
       name: '@MAXMIND/MetaConfig'
-      version: '5.025'
+      version: '5.029'
     -
       class: Dist::Zilla::Plugin::MetaJSON
       name: '@MAXMIND/MetaJSON'
-      version: '5.025'
+      version: '5.029'
     -
       class: Dist::Zilla::Plugin::MinimumPerl
       name: '@MAXMIND/MinimumPerl'
@@ -330,7 +331,7 @@ x_Dist_Zilla:
     -
       class: Dist::Zilla::Plugin::PkgVersion
       name: '@MAXMIND/PkgVersion'
-      version: '5.025'
+      version: '5.029'
     -
       class: Dist::Zilla::Plugin::SurgicalPodWeaver
       config:
@@ -392,7 +393,7 @@ x_Dist_Zilla:
     -
       class: Dist::Zilla::Plugin::PodSyntaxTests
       name: '@MAXMIND/PodSyntaxTests'
-      version: '5.025'
+      version: '5.029'
     -
       class: Dist::Zilla::Plugin::Test::CPAN::Changes
       name: '@MAXMIND/Test::CPAN::Changes'
@@ -488,7 +489,7 @@ x_Dist_Zilla:
         Dist::Zilla::Plugin::Git::Tag:
           branch: ~
           signed: 0
-          tag: v0.003000
+          tag: v0.003001
           tag_format: v%v
           tag_message: v%v
           time_zone: local
@@ -514,48 +515,48 @@ x_Dist_Zilla:
           phase: develop
           type: requires
       name: DevelopRequires
-      version: '5.025'
+      version: '5.029'
     -
       class: Dist::Zilla::Plugin::FinderCode
       name: ':InstallModules'
-      version: '5.025'
+      version: '5.029'
     -
       class: Dist::Zilla::Plugin::FinderCode
       name: ':IncModules'
-      version: '5.025'
+      version: '5.029'
     -
       class: Dist::Zilla::Plugin::FinderCode
       name: ':TestFiles'
-      version: '5.025'
+      version: '5.029'
     -
       class: Dist::Zilla::Plugin::FinderCode
       name: ':ExecFiles'
-      version: '5.025'
+      version: '5.029'
     -
       class: Dist::Zilla::Plugin::FinderCode
       name: ':ShareFiles'
-      version: '5.025'
+      version: '5.029'
     -
       class: Dist::Zilla::Plugin::FinderCode
       name: ':MainModule'
-      version: '5.025'
+      version: '5.029'
     -
       class: Dist::Zilla::Plugin::FinderCode
       name: ':AllFiles'
-      version: '5.025'
+      version: '5.029'
     -
       class: Dist::Zilla::Plugin::FinderCode
       name: ':NoFiles'
-      version: '5.025'
+      version: '5.029'
     -
       class: Dist::Zilla::Plugin::FinderCode
       name: '@MAXMIND/MetaProvides::Package/AUTOVIV/:InstallModulesPM'
-      version: '5.025'
+      version: '5.029'
   zilla:
     class: Dist::Zilla::Dist::Builder
     config:
       is_trial: '0'
-    version: '5.025'
+    version: '5.029'
 x_authority: cpan:MAXMIND
 x_contributors:
   - 'Greg Oschwald <goschwald@maxmind.com>'

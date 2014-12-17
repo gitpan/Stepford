@@ -1,5 +1,5 @@
 package Stepford::Planner;
-$Stepford::Planner::VERSION = '0.003000';
+$Stepford::Planner::VERSION = '0.003001';
 use strict;
 use warnings;
 
@@ -31,7 +31,7 @@ Stepford::Planner - Renamed to Stepford;:Runner
 
 =head1 VERSION
 
-version 0.003000
+version 0.003001
 
 =head1 DESCRIPTION
 

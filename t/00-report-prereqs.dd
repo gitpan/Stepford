@@ -57,6 +57,7 @@ do { my $x = {
                                    },
                    'requires' => {
                                    'ExtUtils::MakeMaker' => '0',
+                                   'File::Copy' => '0',
                                    'File::Spec' => '0',
                                    'IO::Handle' => '0',
                                    'IPC::Open3' => '0',

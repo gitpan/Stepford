@@ -1,5 +1,5 @@
 package Stepford::Runner::State;
-$Stepford::Runner::State::VERSION = '0.003000';
+$Stepford::Runner::State::VERSION = '0.003001';
 use strict;
 use warnings;
 use namespace::autoclean;
@@ -164,7 +164,7 @@ Stepford::Runner::State - Contains data for a single run
 
 =head1 VERSION
 
-version 0.003000
+version 0.003001
 
 =head1 DESCRIPTION
 
